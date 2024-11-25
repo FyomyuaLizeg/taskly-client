@@ -17,7 +17,7 @@ export default function App() {
 return (
 <UserProvider>
 <ChakraProvider>
-<HashRouter>
+<BrowserRouter>
 <NavBar />
 <Toaster position='bottom-right' />
 <Routes>
@@ -32,7 +32,7 @@ return (
 <Route path='/tasks/:taskId' element={<SingleTask />} />
 </Route>
 </Routes>
-</HashRouter>
+</BrowserRouter>
 </ChakraProvider>
 </UserProvider>
 );
