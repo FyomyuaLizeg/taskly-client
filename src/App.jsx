@@ -1,5 +1,5 @@
 import { Toaster } from 'react-hot-toast';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
@@ -13,11 +13,12 @@ import UpdateTask from './pages/UpdateTask';
 import Tasks from './pages/Tasks';
 import SingleTask from './pages/SingleTask';
 
+
 export default function App() {
 return (
 <UserProvider>
 <ChakraProvider>
-<BrowserRouter>
+<HashRouter>
 <NavBar />
 <Toaster position='bottom-right' />
 <Routes>
@@ -32,7 +33,7 @@ return (
 <Route path='/tasks/:taskId' element={<SingleTask />} />
 </Route>
 </Routes>
-</BrowserRouter>
+</HashRouter>
 </ChakraProvider>
 </UserProvider>
 );
